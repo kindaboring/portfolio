@@ -1,3 +1,3 @@
 ## Personal portfolio.
 
-Website can be found here: https://kindaboring.github.io/
+Website can be found here: https://kindaboring.github.io/portfolio
