@@ -1,0 +1,22 @@
+.terminal {
+  max-height: calc(100vh - 250px);
+  margin-bottom: 0px;
+  overflow-y: scroll;
+  background-color: #151515;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.terminal::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.terminal {
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+  
+}
+
+.terminal {
+  -ms-overflow-style: none;
+}
