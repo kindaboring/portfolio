@@ -9,7 +9,7 @@ function Hero() {
     <section className="hero">
       <div className="hero-content">
         <img
-          src="static/headshot.jpg"
+          src="/headshot.jpg"
           alt="Kyle Cummings"
           className="hero-image"
         />
