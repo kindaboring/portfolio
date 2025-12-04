@@ -1,0 +1,78 @@
+.typewriter-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Courier New', 'Monaco', monospace;
+  font-weight: 600;
+}
+
+.terminal-icon {
+  display: inline-flex;
+  align-items: center;
+  color: #0ea5e9;
+}
+
+.terminal-prompt {
+  color: #10b981;
+  font-weight: 700;
+  margin-right: 0.25rem;
+}
+
+.typewriter-text {
+  display: inline-block;
+  min-width: 120px;
+}
+
+.terminal-cursor {
+  opacity: 0;
+  transition: opacity 0.1s;
+  margin-left: 2px;
+  color: #0ea5e9;
+  font-weight: 400;
+}
+
+.terminal-cursor.visible {
+  opacity: 1;
+}
+
+:root.dark .terminal-icon {
+  color: #38bdf8;
+}
+
+:root.dark .terminal-prompt {
+  color: #10b981;
+}
+
+:root.dark .terminal-cursor {
+  color: #38bdf8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) .terminal-icon {
+    color: #38bdf8;
+  }
+
+  :root:not(.light) .terminal-prompt {
+    color: #10b981;
+  }
+
+  :root:not(.light) .terminal-cursor {
+    color: #38bdf8;
+  }
+}
+
+@media (max-width: 768px) {
+  .typewriter-text {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal-icon {
+    display: none;
+  }
+
+  .typewriter-text {
+    min-width: 80px;
+  }
+}
