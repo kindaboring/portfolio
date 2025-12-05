@@ -7,7 +7,17 @@ function Header() {
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
-    element?.scrollIntoView({ behavior: 'smooth' })
+    if (element) {
+      const header = document.querySelector('.header') as HTMLElement
+      const headerHeight = header?.offsetHeight || 0
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    }
   }
 
   return (
@@ -15,7 +25,7 @@ function Header() {
       <div className="header-content">
         <h1 className="logo">
           <TypeWriter
-            texts={['kyle cummings', 'cloud engineer', 'devops', 'IT manager']}
+            texts={['kyle cummings', 'cloud engineer', 'devops', 'IT manager', 'sysadmin']}
             typingSpeed={100}
             deletingSpeed={50}
             pauseTime={2000}

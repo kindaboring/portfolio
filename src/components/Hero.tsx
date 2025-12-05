@@ -1,8 +1,19 @@
 import './Hero.css'
 
 function Hero() {
-  const scrollToAbout = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      const header = document.querySelector('.header') as HTMLElement
+      const headerHeight = header?.offsetHeight || 0
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    }
   }
 
   return (
@@ -22,20 +33,20 @@ function Hero() {
         <div className="hero-buttons">
           <button
             className="btn btn-primary"
-            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => scrollToSection('projects')}
           >
             View My Work
           </button>
           <button
             className="btn btn-secondary"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => scrollToSection('contact')}
           >
             Get In Touch
           </button>
         </div>
       </div>
 
-      <button className="scroll-indicator" onClick={scrollToAbout} aria-label="Scroll to content">
+      <button className="scroll-indicator" onClick={() => scrollToSection('about')} aria-label="Scroll to content">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
