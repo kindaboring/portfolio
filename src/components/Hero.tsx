@@ -3,17 +3,7 @@ import './Hero.css'
 function Hero() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
-    if (element) {
-      const header = document.querySelector('.header') as HTMLElement
-      const headerHeight = header?.offsetHeight || 0
-      const elementPosition = element.getBoundingClientRect().top
-      const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      })
-    }
+    element?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   return (

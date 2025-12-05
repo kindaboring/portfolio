@@ -8,9 +8,10 @@ main {
 }
 
 section {
-  padding: 4rem 0;
+  padding: 2rem 0 4rem 0;
   width: 100%;
   margin: 0;
+  scroll-margin-top: 90px;
 }
 
 section > * {
@@ -23,11 +24,52 @@ section > * {
 
 @media (max-width: 768px) {
   section {
-    padding: 3rem 0;
+    padding: 1.5rem 0 3rem 0;
+    scroll-margin-top: 80px;
+    text-align: center;
   }
 
   section > * {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section * {
+    text-align: center;
+  }
+
+  section a,
+  section button,
+  section .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 1rem 0 2.5rem 0;
+    scroll-margin-top: 150px;
+    text-align: center;
+  }
+
+  section > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section * {
+    text-align: center;
+  }
+
+  section a,
+  section button,
+  section .btn {
+    margin-left: auto;
+    margin-right: auto;
   }
 }

@@ -87,6 +87,14 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+
+  .project-tech {
+    justify-content: center;
+  }
+
+  .project-links {
+    justify-content: center;
+  }
 }
 
 :root.dark .projects {

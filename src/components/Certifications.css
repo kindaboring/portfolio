@@ -169,6 +169,24 @@
   .certification-name {
     font-size: 1.25rem;
   }
+
+  .certification-header {
+    justify-content: center;
+  }
+
+  .certification-footer {
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .certification-status {
+    margin: 0;
+  }
+
+  .certification-verify-link {
+    margin: 0;
+  }
 }
 
 :root.dark .certifications {

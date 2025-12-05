@@ -4,7 +4,7 @@ function Skills() {
   const skillCategories = [
     {
       title: 'Cloud Platforms',
-      skills: ['AWS (EC2, ECS, Lambda, S3, IAM, VPC)', 'AWS (API Gateway, DynamoDB, RDS)', 'Azure', 'GCP']
+      skills: ['AWS', 'Azure', 'GCP']
     },
     {
       title: 'DevOps & Automation',
@@ -20,7 +20,7 @@ function Skills() {
     },
     {
       title: 'Systems & Infrastructure',
-      skills: ['Linux (RHEL/Ubuntu)', 'Windows Server', 'VMware', 'Nginx', 'Jamf', 'Active Directory']
+      skills: ['EC2', 'Lambda', 'S3', 'Linux', 'Windows Server', 'macOS', 'VMware', 'Nginx', 'Jamf']
     },
     {
       title: 'Databases',
