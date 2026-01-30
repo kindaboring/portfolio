@@ -20,7 +20,7 @@
 
 @media (max-width: 768px) {
   .win95-window-container {
-    padding: 10px;
+    padding: 8px;
   }
 
   .win95-window {
@@ -32,11 +32,13 @@
 @media (max-width: 480px) {
   .win95-window-container {
     padding: 0;
+    align-items: flex-start;
   }
 
   .win95-window {
     border: none;
     box-shadow: none;
     min-height: 100vh;
+    max-width: 100%;
   }
 }

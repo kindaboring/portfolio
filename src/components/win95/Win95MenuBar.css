@@ -52,12 +52,42 @@
   cursor: default;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .win95-menu-bar {
-    font-size: 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .win95-menu-item {
-    padding: 4px 6px;
+    padding: 6px 10px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .win95-menu-bar {
+    font-size: 12px;
+    padding: 4px 2px;
+  }
+
+  .win95-menu-item {
+    padding: 8px 8px;
+    min-height: 44px;
+  }
+
+  .win95-dropdown {
+    left: 0;
+    right: auto;
+    min-width: 200px;
+    max-width: calc(100vw - 20px);
+  }
+
+  .win95-menu-dropdown-item {
+    padding: 8px 20px 8px 12px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
 }

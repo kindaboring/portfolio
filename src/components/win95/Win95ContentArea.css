@@ -52,16 +52,38 @@
   }
 }
 
+@media (max-width: 768px) {
+  .win95-address-bar {
+    padding: 6px 4px;
+  }
+
+  .win95-address-field {
+    font-size: 12px;
+    padding: 4px 6px;
+    min-height: 32px;
+  }
+
+  .win95-content-inner {
+    padding: 12px;
+  }
+}
+
 @media (max-width: 480px) {
   .win95-address-bar {
-    padding: 3px;
+    padding: 4px;
   }
 
   .win95-address-label {
     display: none;
   }
 
+  .win95-address-field {
+    font-size: 11px;
+    padding: 6px 8px;
+    min-height: 36px;
+  }
+
   .win95-content-inner {
-    padding: 8px;
+    padding: 12px 10px;
   }
 }

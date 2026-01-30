@@ -45,3 +45,40 @@
   outline: 1px dotted var(--win95-black);
   outline-offset: 2px;
 }
+
+@media (max-width: 768px) {
+  .win95-icon {
+    width: 90px;
+    padding: 6px;
+    margin: 6px;
+  }
+
+  .win95-icon-image {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 6px;
+  }
+
+  .win95-icon-label {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .win95-icon {
+    width: 80px;
+    padding: 8px;
+    margin: 4px;
+  }
+
+  .win95-icon-image {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 6px;
+  }
+
+  .win95-icon-label {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+}
