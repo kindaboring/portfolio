@@ -1,0 +1,54 @@
+/* Windows 95 Color Palette */
+:root {
+  /* Base Colors */
+  --win95-gray: #c0c0c0;
+  --win95-dark-gray: #808080;
+  --win95-light-gray: #dfdfdf;
+  --win95-white: #ffffff;
+  --win95-black: #000000;
+  --win95-navy: #000080;
+  --win95-blue: #1084d0;
+  --win95-desktop-teal: #008080;
+
+  /* UI Element Colors */
+  --win95-highlight: #000080;
+  --win95-highlight-text: #ffffff;
+  --win95-button-face: #c0c0c0;
+  --win95-button-shadow: #808080;
+  --win95-button-hilight: #ffffff;
+  --win95-button-dark-shadow: #000000;
+  --win95-button-light: #dfdfdf;
+
+  /* 3D Border Effects */
+  --win95-border-raised:
+    inset -1px -1px #0a0a0a,
+    inset 1px 1px #ffffff,
+    inset -2px -2px #808080,
+    inset 2px 2px #dfdfdf;
+
+  --win95-border-sunken:
+    inset -1px -1px #ffffff,
+    inset 1px 1px #0a0a0a,
+    inset -2px -2px #dfdfdf,
+    inset 2px 2px #808080;
+
+  --win95-border-field:
+    inset -1px -1px #ffffff,
+    inset 1px 1px #808080,
+    inset -2px -2px #dfdfdf,
+    inset 2px 2px #0a0a0a;
+
+  /* Typography */
+  --win95-font-family: "MS Sans Serif", "Microsoft Sans Serif", Arial, sans-serif;
+  --win95-font-size: 11px;
+  --win95-font-size-lg: 13px;
+  --win95-font-size-title: 11px;
+
+  /* Spacing */
+  --win95-padding-sm: 2px;
+  --win95-padding-md: 4px;
+  --win95-padding-lg: 8px;
+
+  /* Window Effects */
+  --win95-window-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,25 @@
+/* Win95 panel styles are defined in win95-components.css */
+/* This file is for additional panel variants */
+
+.win95-panel-field {
+  background: var(--win95-white);
+  box-shadow: var(--win95-border-field);
+  padding: 8px;
+}
+
+.win95-panel-group {
+  border: 2px groove var(--win95-gray);
+  padding: 12px;
+  margin: 8px 0;
+  position: relative;
+}
+
+.win95-panel-group-title {
+  position: absolute;
+  top: -8px;
+  left: 8px;
+  background: var(--win95-gray);
+  padding: 0 4px;
+  font-size: var(--win95-font-size);
+  font-weight: bold;
+}

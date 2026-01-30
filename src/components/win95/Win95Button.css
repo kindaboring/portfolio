@@ -1,0 +1,13 @@
+/* Win95 button styles are defined in win95-components.css */
+/* This file is a placeholder for any additional button-specific styles */
+
+.win95-button.win95-button-primary {
+  font-weight: bold;
+  min-width: 75px;
+}
+
+.win95-button.win95-button-large {
+  padding: 4px 16px;
+  min-height: 28px;
+  font-size: var(--win95-font-size-lg);
+}

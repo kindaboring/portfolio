@@ -1,0 +1,37 @@
+.win95-status-bar {
+  background: var(--win95-gray);
+  border-top: 1px solid var(--win95-white);
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: var(--win95-font-size);
+  min-height: 20px;
+}
+
+.win95-status-bar-field {
+  box-shadow: var(--win95-border-sunken);
+  padding: 2px 4px;
+  background: var(--win95-gray);
+  min-height: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.win95-status-bar-field:first-child {
+  min-width: 80px;
+}
+
+.win95-status-section {
+  flex: 1;
+}
+
+@media (max-width: 480px) {
+  .win95-status-bar {
+    font-size: 10px;
+  }
+
+  .win95-status-bar-field:first-child {
+    min-width: 60px;
+  }
+}

@@ -1,75 +1,21 @@
-.app {
-  width: 100%;
-  margin: 0 auto;
-}
-
-main {
-  width: 100%;
+.win95-main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  background: var(--win95-white);
+  border: 2px solid;
+  border-color: var(--win95-dark-gray) var(--win95-white) var(--win95-white) var(--win95-dark-gray);
+  margin: 2px;
 }
 
 section {
-  padding: 2rem 0 4rem 0;
   width: 100%;
   margin: 0;
-  scroll-margin-top: 90px;
-}
-
-section > * {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-@media (max-width: 768px) {
-  section {
-    padding: 1.5rem 0 3rem 0;
-    scroll-margin-top: 80px;
-    text-align: center;
-  }
-
-  section > * {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  section * {
-    text-align: center;
-  }
-
-  section a,
-  section button,
-  section .btn {
-    margin-left: auto;
-    margin-right: auto;
-  }
+  padding: 0;
 }
 
 @media (max-width: 480px) {
-  section {
-    padding: 1rem 0 2.5rem 0;
-    scroll-margin-top: 150px;
-    text-align: center;
-  }
-
-  section > * {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  section * {
-    text-align: center;
-  }
-
-  section a,
-  section button,
-  section .btn {
-    margin-left: auto;
-    margin-right: auto;
+  .win95-main-content {
+    margin: 1px;
   }
 }

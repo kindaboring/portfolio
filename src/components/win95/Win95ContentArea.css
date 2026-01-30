@@ -1,0 +1,67 @@
+.win95-content-area-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.win95-address-bar {
+  background: var(--win95-gray);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-bottom: 1px solid var(--win95-dark-gray);
+  font-size: var(--win95-font-size);
+}
+
+.win95-address-label {
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.win95-address-field {
+  flex: 1;
+  background: var(--win95-white);
+  border: none;
+  box-shadow: var(--win95-border-field);
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 20px;
+}
+
+.win95-folder-icon-small {
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.win95-content-inner {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 16px;
+  background: var(--win95-white);
+}
+
+@media (max-width: 768px) {
+  .win95-content-inner {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .win95-address-bar {
+    padding: 3px;
+  }
+
+  .win95-address-label {
+    display: none;
+  }
+
+  .win95-content-inner {
+    padding: 8px;
+  }
+}

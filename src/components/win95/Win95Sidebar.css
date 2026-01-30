@@ -1,0 +1,60 @@
+.win95-sidebar {
+  width: 200px;
+  background: var(--win95-white);
+  border-right: 1px solid var(--win95-dark-gray);
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.win95-treeview {
+  padding: 4px;
+  font-size: var(--win95-font-size);
+}
+
+.win95-treeview-item {
+  display: flex;
+  align-items: center;
+  padding: 2px 0;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.win95-treeview-item.selected {
+  background: var(--win95-highlight);
+  color: var(--win95-highlight-text);
+}
+
+.win95-treeview-item:hover:not(.selected) {
+  background: var(--win95-light-gray);
+}
+
+.win95-treeview-expander {
+  width: 12px;
+  height: 12px;
+  margin-right: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.win95-folder-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .win95-sidebar {
+    display: none;
+  }
+}

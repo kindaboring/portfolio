@@ -1,0 +1,119 @@
+/* Windows 95 Base Styles and Reset */
+
+/* Import Variables */
+@import './win95-variables.css';
+
+/* Global Reset for Win95 Aesthetic */
+* {
+  border-radius: 0 !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--win95-font-family);
+  font-size: var(--win95-font-size);
+  background: var(--win95-desktop-teal);
+  margin: 0;
+  padding: 0;
+  color: var(--win95-black);
+  line-height: 1.4;
+}
+
+/* Typography Reset */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--win95-font-family);
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 { font-size: 18px; }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4 { font-size: 13px; }
+h5 { font-size: 12px; }
+h6 { font-size: 11px; }
+
+p {
+  margin: 0 0 8px 0;
+}
+
+/* Links */
+a {
+  color: var(--win95-navy);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:visited {
+  color: #800080;
+}
+
+a:hover {
+  color: var(--win95-blue);
+}
+
+/* Selection */
+::selection {
+  background: var(--win95-highlight);
+  color: var(--win95-highlight-text);
+}
+
+/* Scrollbar Styling (WebKit browsers) */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--win95-white);
+  border-left: 1px solid var(--win95-dark-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--win95-gray);
+  border: 1px outset var(--win95-gray);
+}
+
+::-webkit-scrollbar-button {
+  background: var(--win95-gray);
+  border: 1px outset var(--win95-gray);
+  height: 16px;
+  width: 16px;
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M8 4 L4 12 L12 12 Z" fill="%23000"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M8 12 L4 4 L12 4 Z" fill="%23000"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Focus Styles */
+:focus {
+  outline: 1px dotted var(--win95-black);
+  outline-offset: -3px;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 1px dotted var(--win95-black);
+  outline-offset: -4px;
+}
+
+/* Remove smooth scrolling */
+html {
+  scroll-behavior: auto;
+}

@@ -1,0 +1,102 @@
+.win95-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+}
+
+.win95-dialog {
+  background: var(--win95-gray);
+  border: 2px outset var(--win95-gray);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.win95-dialog-title-bar {
+  background: linear-gradient(90deg, var(--win95-navy) 0%, var(--win95-blue) 100%);
+  color: var(--win95-white);
+  padding: 2px 4px;
+  font-weight: bold;
+  font-size: var(--win95-font-size-title);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 18px;
+  user-select: none;
+}
+
+.win95-dialog-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.win95-dialog-icon {
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
+}
+
+.win95-dialog-close {
+  width: 16px;
+  height: 14px;
+  background: var(--win95-gray);
+  border: none;
+  box-shadow: var(--win95-border-raised);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--win95-black);
+}
+
+.win95-dialog-close:active {
+  box-shadow: var(--win95-border-sunken);
+}
+
+.win95-dialog-content {
+  padding: 12px;
+  overflow-y: auto;
+  background: var(--win95-gray);
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .win95-dialog {
+    max-width: 95vw;
+    max-height: 85vh;
+  }
+
+  .win95-dialog-content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .win95-dialog-overlay {
+    padding: 10px;
+  }
+
+  .win95-dialog {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .win95-dialog-content {
+    padding: 8px;
+    font-size: 11px;
+  }
+}

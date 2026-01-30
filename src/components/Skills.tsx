@@ -1,64 +1,85 @@
+import { useState } from 'react'
 import './Skills.css'
+import Win95Icon from './win95/Win95Icon'
+import Win95Panel from './win95/Win95Panel'
 
 function Skills() {
+  const [selectedCategory, setSelectedCategory] = useState<number | null>(null)
+
   const skillCategories = [
     {
       title: 'Cloud Platforms',
+      icon: '☁️',
       skills: ['AWS', 'Azure', 'GCP']
     },
     {
-      title: 'DevOps & Automation',
-      skills: ['Terraform', 'GitHub Actions', 'GitLab CI/CD', 'Ansible', 'Python (Boto3)', 'Bash', 'PowerShell']
-    },
-    {
-      title: 'Containers & Orchestration',
-      skills: ['Docker', 'Docker Compose', 'Kubernetes (EKS)', 'ECS', 'ECR']
-    },
-    {
-      title: 'Monitoring & Logging',
-      skills: ['Prometheus', 'Grafana', 'CloudWatch', 'AlertManager']
-    },
-    {
-      title: 'Systems & Infrastructure',
-      skills: ['EC2', 'Lambda', 'S3', 'Linux', 'Windows Server', 'macOS', 'VMware', 'Nginx', 'Jamf']
-    },
-    {
-      title: 'Databases',
-      skills: ['MongoDB', 'DynamoDB', 'SQL', 'RDS']
+      title: 'Compute & Serverless',
+      icon: '⚡',
+      skills: ['EC2', 'Lambda']
     },
     {
       title: 'Networking & Security',
-      skills: ['VPC', 'Load Balancers (ALB)', 'IAM', 'Security Groups', 'Route53']
+      icon: '🔒',
+      skills: ['VPC', 'IAM', 'API Gateway']
     },
     {
-      title: 'Development Tools',
-      skills: ['Git', 'GitHub', 'GitLab', 'VS Code', 'Python', 'TypeScript']
+      title: 'Containers & Orchestration',
+      icon: '📦',
+      skills: ['Docker', 'Docker Compose', 'Kubernetes (EKS)', 'ECS', 'ECR']
+    },
+    {
+      title: 'Databases & Storage',
+      icon: '🗄️',
+      skills: ['DynamoDB', 'RDS', 'S3', 'SQL', 'MongoDB']
+    },
+    {
+      title: 'DevOps & Automation',
+      icon: '⚙️',
+      skills: ['Terraform', 'GitHub Actions', 'GitLab CI/CD', 'Ansible', 'Python', 'Bash', 'PowerShell']
+    },
+    {
+      title: 'Monitoring & Logging',
+      icon: '📊',
+      skills: ['Prometheus', 'Grafana', 'CloudWatch']
+    },
+    {
+      title: 'Systems & Infrastructure',
+      icon: '🖥️',
+      skills: ['Linux (RHEL/Ubuntu)', 'Windows Server', 'VMware', 'Nginx', 'Jamf']
     }
   ]
 
   return (
     <section id="skills" className="skills">
-      <h2 className="section-title">
-        <svg className="section-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <polyline points="16 18 22 12 16 6"></polyline>
-          <polyline points="8 6 2 12 8 18"></polyline>
-        </svg>
-        Skills & Technologies
-      </h2>
-      <div className="skills-grid">
+      <div className="skills-header">
+        <span className="skills-icon">⚡</span>
+        <h2>SKILLS.SYS</h2>
+      </div>
+
+      <div className="skills-icons">
         {skillCategories.map((category, index) => (
-          <div key={index} className="skill-category">
-            <h3 className="category-title">{category.title}</h3>
-            <div className="skill-tags">
-              {category.skills.map((skill, skillIndex) => (
-                <span key={skillIndex} className="skill-tag">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
+          <Win95Icon
+            key={index}
+            icon={category.icon}
+            label={category.title}
+            selected={selectedCategory === index}
+            onClick={() => setSelectedCategory(selectedCategory === index ? null : index)}
+          />
         ))}
       </div>
+
+      {selectedCategory !== null && (
+        <Win95Panel variant="sunken" className="skills-detail">
+          <h3>{skillCategories[selectedCategory].title}</h3>
+          <div className="skills-tags">
+            {skillCategories[selectedCategory].skills.map((skill, skillIndex) => (
+              <span key={skillIndex} className="skill-tag">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </Win95Panel>
+      )}
     </section>
   )
 }

@@ -1,0 +1,42 @@
+.win95-window-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--win95-desktop-teal);
+}
+
+.win95-window {
+  width: 100%;
+  max-width: 1200px;
+  background: var(--win95-gray);
+  border: 2px outset var(--win95-gray);
+  box-shadow: var(--win95-window-shadow);
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+}
+
+@media (max-width: 768px) {
+  .win95-window-container {
+    padding: 10px;
+  }
+
+  .win95-window {
+    max-width: 100%;
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .win95-window-container {
+    padding: 0;
+  }
+
+  .win95-window {
+    border: none;
+    box-shadow: none;
+    min-height: 100vh;
+  }
+}
