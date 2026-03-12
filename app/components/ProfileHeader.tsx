@@ -10,15 +10,15 @@ export default function ProfileHeader() {
       </div>
 
       {/* Avatar */}
-      <div className="px-4 flex items-start justify-between" style={{ marginTop: "-40px", position: "relative", zIndex: 1 }}>
+      <div className="px-4 flex items-start justify-between" style={{ marginTop: "-56px", position: "relative", zIndex: 1 }}>
         <div
-          className="w-20 h-20 rounded-full border-4 overflow-hidden select-none flex-shrink-0"
+          className="w-28 h-28 rounded-full border-4 overflow-hidden select-none flex-shrink-0"
           style={{
             borderColor: "var(--bg)",
             boxShadow: "0 4px 16px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.12)",
           }}
         >
-          <Image src="/headshot.jpg" alt="Kyle Cummings" width={80} height={80} style={{ objectFit: "cover", width: "100%", height: "100%" }} priority />
+          <Image src="/headshot.jpg" alt="Kyle Cummings" width={112} height={112} style={{ objectFit: "cover", width: "100%", height: "100%" }} priority />
         </div>
       </div>
 

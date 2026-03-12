@@ -16,7 +16,7 @@ const ExternalLinkIcon = () => (
 
 export default function SubstackCard() {
   return (
-    <Link href="https://substack.com/@kylecummings" target="_blank" rel="noopener noreferrer">
+    <Link href="https://substack.com/@kylecumm1ngs" target="_blank" rel="noopener noreferrer">
       <article className="content-card" style={{ padding: "20px" }}>
         {/* Top row: icon + title */}
         <div className="flex items-center gap-3">

@@ -13,14 +13,14 @@ export default function Home() {
 
         {/* Feed */}
         <div className="px-4 py-3 flex flex-col gap-3">
-          {/* Socials card */}
-          <SocialsCard />
+          {/* Projects card */}
+          <ProjectsCard />
 
           {/* Substack card (pinned) */}
           <SubstackCard />
 
-          {/* Projects card */}
-          <ProjectsCard />
+          {/* Socials card */}
+          <SocialsCard />
         </div>
 
         {/* Bottom padding for mobile */}
