@@ -1,6 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const AtIcon = () => (
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="4" />
+    <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94" />
+  </svg>
+);
+
 const socials = [
   {
     label: "GitHub",
@@ -24,8 +31,11 @@ export default function SocialsCard() {
     <article className="content-card" style={{ padding: "20px" }}>
       {/* Top row: icon + title */}
       <div className="flex items-center gap-3">
-        <div className="flex-shrink-0 w-12 h-12 rounded-xl overflow-hidden">
-          <Image src="/socials-icon.jpg" alt="Socials" width={48} height={48} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
+        <div
+          className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center"
+          style={{ background: "var(--bg-secondary)", color: "var(--text-secondary)" }}
+        >
+          <AtIcon />
         </div>
         <div>
           <span className="font-bold text-base" style={{ color: "var(--text-primary)" }}>
