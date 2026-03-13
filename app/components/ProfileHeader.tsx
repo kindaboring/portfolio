@@ -47,24 +47,23 @@ export default function ProfileHeader() {
             <path d="M12 2C8.686 2 6 4.686 6 8c0 5.25 6 14 6 14s6-8.75 6-14c0-3.314-2.686-6-6-6z" />
             <circle cx="12" cy="8" r="2" />
           </svg>
-          baltimore/nyc
+          baltimore / nyc
         </span>
         <Link
           href="https://kylec.dev"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-1 text-sm transition-colors hover:underline"
+          className="flex items-center gap-1 text-sm"
           style={{ color: "var(--accent)" }}
         >
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--text-secondary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71" />
             <path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" />
           </svg>
-          kylec.dev
+          <span>kylec.dev</span>
         </Link>
       </div>
 
-      <div className="mt-3" style={{ borderBottom: "1px solid var(--border)" }} />
     </div>
   );
 }

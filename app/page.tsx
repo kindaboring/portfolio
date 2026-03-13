@@ -12,7 +12,7 @@ export default function Home() {
         <ProfileHeader />
 
         {/* Feed */}
-        <div className="px-4 py-3 flex flex-col gap-3">
+        <div className="px-4 pt-6 pb-3 flex flex-col gap-3">
           {/* Projects card */}
           <ProjectsCard />
 

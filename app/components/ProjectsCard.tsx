@@ -12,7 +12,7 @@ const CodeIcon = () => (
 export default function ProjectsCard() {
   return (
     <article className="content-card" style={{ padding: "20px" }}>
-      {/* Top row: icon + title */}
+      {/* Top row: icon + title + link */}
       <div className="flex items-center gap-3">
         <div
           className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center"
@@ -20,11 +20,21 @@ export default function ProjectsCard() {
         >
           <CodeIcon />
         </div>
-        <div>
-          <span className="font-bold text-base" style={{ color: "var(--text-primary)" }}>
-            Projects
-          </span>
-        </div>
+        <span className="font-bold text-base" style={{ color: "var(--text-primary)" }}>
+          Projects
+        </span>
+        <Link
+          href="https://github.com/kindaboring"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ml-auto"
+          style={{ color: "var(--text-secondary)" }}
+        >
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7" />
+            <polyline points="7 7 17 7 17 17" />
+          </svg>
+        </Link>
       </div>
 
       {/* Project tiles */}
